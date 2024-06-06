@@ -93,13 +93,14 @@ class SettingsBackupController : SettingsController() {
                 titleRes = R.string.backup_frequency
                 entriesRes = arrayOf(
                     R.string.manual,
+                    R.string.every_5_minutes,
                     R.string.every_6_hours,
                     R.string.every_12_hours,
                     R.string.daily,
                     R.string.every_2_days,
                     R.string.weekly,
                 )
-                entryValues = listOf(0, 6, 12, 24, 48, 168)
+                entryValues = listOf(0, 5, 360, 720, 1440, 2880, 10080)
 
                 onChange { newValue ->
                     val interval = newValue as Int

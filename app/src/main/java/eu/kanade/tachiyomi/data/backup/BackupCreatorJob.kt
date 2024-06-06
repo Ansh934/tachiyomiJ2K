@@ -60,7 +60,7 @@ class BackupCreatorJob(private val context: Context, workerParams: WorkerParamet
             if (interval > 0) {
                 val request = PeriodicWorkRequestBuilder<BackupCreatorJob>(
                     interval.toLong(),
-                    TimeUnit.HOURS,
+                    TimeUnit.MINUTES,
                     10,
                     TimeUnit.MINUTES,
                 )
